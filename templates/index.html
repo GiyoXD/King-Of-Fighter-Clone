@@ -1,7 +1,12 @@
 {% extends "layout.html" %}
 
-{% block title %} King Of Fighters {% endblock %}
+<!-- add the script to capture the easeLjs library -->
+{% block script %}
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+{% endblock %}
+
 
 {% block body %}
-    <canvas id="draw-canvas"></canvas>
+    <script type="module" src="{{ url_for('static', filename='index.js' )}}"></script>
+    <div id="draw-canvas"></div>
 {% endblock %}
